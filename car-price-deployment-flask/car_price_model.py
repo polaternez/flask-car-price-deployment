@@ -31,6 +31,7 @@ pipe = Pipeline([("scaler", StandardScaler()), ("rf_regr", RandomForestRegressor
 # Train Model
 pipe.fit(X_train, y_train)
 
+# Evaluate Model
 scores = cross_val_score(pipe, X, y)
 
 print(scores)
